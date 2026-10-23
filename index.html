@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý Danh sách Sinh viên</title>
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Quản lý Danh sách Sinh viên</h1>
+
+    <section class="form-section">
+      <h2>Thêm sinh viên mới</h2>
+      <form id="student-form">
+        <div class="form-group">
+          <label for="name">Họ và tên:</label>
+          <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
+        </div>
+        <div class="form-group">
+          <label for="dob">Ngày sinh:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group">
+          <label for="gender">Giới tính:</label>
+          <select id="gender" name="gender" required>
+            <option value="">-- Chọn --</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm sinh viên</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Danh sách sinh viên</h2>
+      <div id="student-count">Tổng số: 0</div>
+      <table id="student-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Họ và tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id="student-list">
+          <!-- Dữ liệu sẽ được render bằng JS -->
+        </tbody>
+      </table>
+      <p id="empty-message" class="empty">Chưa có sinh viên nào. Hãy thêm mới!</p>
+    </section>
+  </div>
+</body>
+</html>
